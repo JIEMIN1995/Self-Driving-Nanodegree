@@ -95,6 +95,7 @@ After that, apply a light morphology to remove noises. The finnal binary result 
 #### 4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
 
 As the slides introduce, I implement sliding windows to identify lane-line pixels. Firstly, sum up pixel values along y axis on thresholded binary images. And a hitogram is plotted below:
+
   ![alt text][image7]
 
 We can easily find the lane lines by checking two peaks in histogram. You can check the code of this step in function detection() in the file of 'Detection.py'. The coordinates x of two peaks in the histogram can be selected as starting points for searching. After determining the starting positions, we search from bottom to top with sliding windows. While sliding the window, it count the number of nonzero pixels within the window. If the number is greater than a specific number, then center the window on the mean position of lane pixels detected and store the locations of  these pixels. Repeat this procedure to step through the windows one by one. Finally, extract all the left and right line pixel positions and fit second order polynomial. The result is displayed below:
