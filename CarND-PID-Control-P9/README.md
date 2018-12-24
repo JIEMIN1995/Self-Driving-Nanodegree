@@ -10,7 +10,7 @@ I component, or integral gain, is the sum of previous error of systematic biases
 
 D component, or derivative gain, helps to take temporal derivative of error. It is a practical way to cancel the overshoot effect and smooth the curve. 
 ## Hyperparameters tunning
-The final hyperparameters were chosen by manual tunning. Firstly, tunning parameter p is a basic step. Large value may lead to intensive oscillation while smalle one may bring the slow response. The expected result is to get one with quick response and small overshoot. After that, we need to tune i component for completely removing steady disturbance. However, PI perform not well with dealing with dynamic error. The derivative term is introduced to smooth out the curve and make the vehicle fit the track quickly. 
+The final hyperparameters were chosen by manual tunning. Firstly, tunning parameter p is a basic step. Large value may lead to intensive oscillation while smalle one may bring the slow response. The expected result is to get one with quick response and small overshoot. After that, we need to tune i component for completely removing steady disturbance. However, PI controller perform not well with dealing with dynamic error. The derivative term is introduced to smooth out the curve and make the vehicle fit the track quickly. 
 
 ---
 
