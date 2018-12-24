@@ -1,5 +1,16 @@
 # CarND-Controls-PID
-Self-Driving Car Engineer Nanodegree Program
+## Introduction
+A proportional-integral-derivative controller (PID controller) is a control loop feedback mechanism widely used in industrial control systems and a variety of other applications requiring continuously modulated control. The PID controller continuously calculates a correction based on error between expected result and observations. 
+## Effect of each component
+Three components are combined to produce a control signal. They play different roles in this process. First of all, we call the distance of the vehicle from trajectory Cross Track Error(CTE).
+  
+P component, or proportional gain, sets the steering angle in proportion to CTE with factor tau. It has the most observable effect on movement of vehicle. 
+
+I component, or integral gain, is the sum of previous error of systematic biases. Sometimes the PD controller cannot handle the steady disturbance caused by inaccurate steering or uneven road. And the integral gain can effectively adress this issue. 
+
+D component, or derivative gain, helps to take temporal derivative of error. It is a practical way to cancel the overshoot effect and smooth the curve. 
+## Hyperparameters tunning
+The final hyperparameters were chosen by manual tunning. Firstly, tunning parameter p is a basic step. Large value may lead to intensive oscillation while smalle one may bring the slow response. The expected result is to get one with quick response and small overshoot. After that, we need to tune i component for completely removing steady disturbance. However, PI perform not well with dealing with dynamic error. The derivative term is introduced to smooth out the curve and make the vehicle fit the track quickly. 
 
 ---
 
