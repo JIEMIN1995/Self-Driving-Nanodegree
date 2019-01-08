@@ -42,7 +42,7 @@ Compared with PID controller, MPC can take the current motions into account and 
 
 * Now we put all the components together to set up the complete model. 
 
-    <img src="img/model.png" width="50%" height="50%">
+    <img src="img/model.png" width="60%" height="60%">
 
 ## Timestep Length and Elapsed Duration
 The prediction horizon is the duration over which future predictions are made. N is the number of timesteps in the horizon and dt is how much time elapses between actuations. 
