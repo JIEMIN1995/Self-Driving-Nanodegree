@@ -8,7 +8,7 @@ Self-Driving Car Engineer Nanodegree Program
 ## Overview
 **Model Predictive Controller (MPC)** is an advanced method of process control considering a set of constraints. In other words, MPC can predict the best route along the reference trajectory based on the current vehicle’s motion. Furthermore, we can define how vehicle move by adding constraints and a combination of costs (such as staying close to the trajectory and prevent jerking the steering wheel too quickly). MPC transforms the process control to an optimization problem and calculates a solution with minimum cost. After that, the vehicle follows the resulting trajectory and repeat optimization again. 
 
-<img src="img/overview.png" width="40%" height="40%">
+<img src="img/overview.png" width="60%" height="60%">
 
 Compared with PID controller, MPC can take the current motions into account and anticipate the future events. Thus, it effectively addresses the issue of delayed execution of commands. 
 
@@ -27,7 +27,7 @@ Compared with PID controller, MPC can take the current motions into account and 
 
 * The **update equations** used to predict the new state from the current state is shown below
 
-    <img src="img/update.png" width="20%" height="20%">
+    <img src="img/update.png" width="40%" height="40%">
 
   Here Lf is the distance between the front of vehicle and its center of gravity. The larger vehicle is, the slower turn rate is. 
 
@@ -42,7 +42,7 @@ Compared with PID controller, MPC can take the current motions into account and 
 
 * Now we put all the components together to set up the complete model. 
 
-    <img src="img/model.png" width="30%" height="30%">
+    <img src="img/model.png" width="50%" height="50%">
 
 ## Timestep Length and Elapsed Duration
 The prediction horizon is the duration over which future predictions are made. N is the number of timesteps in the horizon and dt is how much time elapses between actuations. 
