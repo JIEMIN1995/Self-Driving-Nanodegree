@@ -14,7 +14,7 @@ Compared with PID controller, MPC can take the current motions into account and 
 
 ## Model
 
-* Here we used a simplified **kinetic model** including 4 components. Besides that, we add two move components for describing the deviation from the reference trajectory. 
+* Here we used a simplified **kinematic model** including 4 components. Besides that, we add two move components for describing the deviation from the reference trajectory. 
     * Location of the vehicle, (x, y)
     * Heading direction psi
     * Vehicle speed v
